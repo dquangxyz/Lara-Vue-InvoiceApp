@@ -604,3 +604,16 @@ ul {
 .grand__total--items span {
     font-size: 26px;
 }
+
+.list-product-item {
+    display: grid;
+    grid-template-columns: 30px 350px 15px;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.btn-add-item {
+    border: 1px solid #e0e0e0;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
