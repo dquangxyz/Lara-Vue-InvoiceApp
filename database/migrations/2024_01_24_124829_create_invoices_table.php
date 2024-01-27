@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('number')->unique();
             $table->integer('customer_id');
             $table->date('date');
-            $table->date('due_date');
+            $table->date('due_date')->nullable();
             $table->string('reference')->nullable();
             $table->text('terms_and_conditions');
             $table->double('sub_total');

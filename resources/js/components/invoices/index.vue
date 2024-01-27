@@ -10,7 +10,6 @@
     const getInvoices = async () => {
         try {
             let res = await axios.get("/api/get_all_invoice");
-            console.log("responses", res);
             invoices.value = res.data.invoices;
         } catch (error) {
             console.error("Error fetching invoices:", error.response);
@@ -19,13 +18,11 @@
 
     const search= async () => {
         let res = await axios.get("api/search_invoice?s="+searchInvoice.value);
-        console.log("search response", res.data.invoices);
         invoices.value = res.data.invoices;
     }
 
     const newInvoice = async () => {
         let form = await axios.get("api/create_invoice");
-        console.log("create form", form);
         router.push('/invoice/new');
     }
 
