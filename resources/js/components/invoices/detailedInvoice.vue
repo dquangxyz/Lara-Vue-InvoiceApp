@@ -25,6 +25,10 @@
         router.push('/').catch(() => {})
     }
 
+    const onEdit = (id) => {
+        router.push('/invoice/edit/' + id)
+    }
+
 </script>
 
 <template setup>
@@ -57,7 +61,7 @@
                         </li>
                         <li>
                             <!-- Select Btn Option -->
-                            <button class="selectBtnFlat">
+                            <button class="selectBtnFlat" @click="onEdit(form.id)">
                                 <i class=" fas fa-reply"></i>
                                 Edit
                             </button>
@@ -142,8 +146,8 @@
                             <span> $ {{ form.sub_total }}</span>
                         </div>
                         <div class="invoice__subtotal--item2">
-                            <p>Discount</p>
-                            <span>$ {{ form.discount }}</span>
+                            <p>Discount (%)</p>
+                            <span> {{ form.discount }} </span>
                         </div>
                         
                     </div>

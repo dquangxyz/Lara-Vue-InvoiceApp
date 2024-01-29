@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import invoiceIndex from '../components/invoices/index.vue';
 import invoiceNew from '../components/invoices/newInvoice.vue';
 import invoiceDetails from '../components/invoices/detailedInvoice.vue';
+import invoiceEdit from '../components/invoices/editInvoice.vue';
 import notFound from '../components/NotFound.vue';
 
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
     {
         path: '/invoice/details/:id',
         component: invoiceDetails,
+        props: true
+    },
+    {
+        path: '/invoice/edit/:id',
+        component: invoiceEdit,
         props: true
     },
     {
