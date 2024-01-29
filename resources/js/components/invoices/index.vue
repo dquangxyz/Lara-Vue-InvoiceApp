@@ -26,6 +26,9 @@
         router.push('/invoice/new');
     }
 
+    const onShowDetails = (id) => {
+        router.push('/invoice/details/' + id)
+    }
     
     onMounted(async () => { getInvoices() })
 
@@ -97,7 +100,7 @@
                     v-for="item in invoices" :key="item.id"
                     v-if="invoices.length > 0"
                 >
-                    <a href="#" class="table--items--transactionId">#{{ item.id }}</a>
+                    <a href="#" @click="onShowDetails(item.id)">#{{ item.id }}</a>
                     <p>{{ item.date }}</p>
                     <p>#{{ item.number }}</p>
                     <p v-if="item.customer">{{ item.customer.firstname }}</p>

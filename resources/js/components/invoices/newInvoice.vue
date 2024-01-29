@@ -65,9 +65,6 @@
             const subTotal = calculateSubTotal()
             const grandTotal = calculateGrandTotal()
 
-            console.log("customer id", customer_id.value)
-            console.log("subtotal", subTotal)
-
             const formData = new FormData()
             formData.append('invoice_item', JSON.stringify(listCart.value))
             formData.append('customer_id', customer_id.value)
